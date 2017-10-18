@@ -28,9 +28,11 @@ module.exports = function(app){
      app.use(methodOverride());
      //parseo de cookies
      app.use(cookieParser('Algun-valor-secreto'));
-
+     // crear las rutas de prueba de la app
+     app=routes(app);
+     
      //habilitando el servicio estatico de archivos
-     app.use('/naranja/', express.static(path.join(__dirname, '../public')));//path para definir rutas
+     app.use('/public/', express.static(path.join(__dirname, '../public')));//path para definir rutas
 
      //middelware para el manejode errores
      if(app.get('env') === 'develoment'){

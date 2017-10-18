@@ -15,12 +15,6 @@ app.set('ip', process.env.IP || '0.0.0.0');
 app.set('views', path.join(__dirname + '/views'));
 //aplicando configuraciones a nuestra App
 app = config(app);
-// crear las rutas de prueba de la app
-app.get('/', (req, res)=>{
-//codificado la respuesta
-res.send("Adios ITO");
-});
-
 //consultar la variables de entorno ra recatar el IP y el PORT
 const IP = app.get('ip');
 const PORT = app.get('port');
