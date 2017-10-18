@@ -18,7 +18,7 @@ app = config(app);
 // crear las rutas de prueba de la app
 app.get('/', (req, res)=>{
 //codificado la respuesta
-res.send("Hola ITO");
+res.send("Adios ITO");
 });
 
 //consultar la variables de entorno ra recatar el IP y el PORT
