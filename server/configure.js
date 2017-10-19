@@ -19,6 +19,23 @@ var routes
  = require('./routes');
 
 module.exports = function(app){
+    //Configurando handlebars
+    //1. Dar de alta el template engine y configurarlo
+    app.engine('.hbs',exphdb.create({
+        defaultLayout: 'main',
+        extname : 'hbs',
+        layoutsDir : path.join(app.get('views'),'layouts'),
+        partialsDir: [path.join(app.get('views'),'partials')],
+        helpers:{
+            timeago: function(timestamp){
+                return moment(timestamp).startOf('minutes').fromNow();
+            }
+        }
+    }).engine);
+
+    //2.Asignarlo comoel template engine de trabajo
+    app.set('view engine', '.hbs');
+
     //conectando los Middlewares
     app.use(morgan('dev')); //middelware para login de desarrollo de HTTP
     //Parseo de la URL

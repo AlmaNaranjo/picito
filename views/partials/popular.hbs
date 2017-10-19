@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            Mas Populares
+        </h3>
+    </div>
+
+<!--BODY -->
+<div class="panel-body">
+    {{#each sidebar.popular}}
+    <div
+    style="padding-bottom: 0.5em;"
+    class="col-md-4 text-center">
+    <a href="/images/index/{{uniqueId}}">
+    <img
+    class="img-thumbail"
+    style="width: 75px; heigth: 75px;"  
+    src="/public/upload/{{filename}}" 
+    alt="Imagen popular">
+    </a>
+    </div>
+    {{/each}}
+</div>
+
+</div>
