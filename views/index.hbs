@@ -38,7 +38,7 @@
                 <textarea
                 class="form-control"
                 name="description"
-                id="description">
+                id="description"
                 rows="2"></textarea>
             </div>
         </div> 
@@ -66,16 +66,14 @@
     </div>
     <div class="panel-body">
         {{#each images}}
-        <div
-        style="padding-bottom: 1 em;"
+        <div style="padding-bottom: 1 em;" 
         class="col-md-4 text-center">
-        <a ref="/images/index/{{uniqueId}}">
-        <img
-        class="img-thumbnail"
-        style="width: 175px; heigth: 175px"
-        src="/public/upload/{{filename}}"
-        alt="{{title}}">
-        </a>
+            <a href="/images/index/{{uniqueId}}">
+                <img class="img-thumbnail" 
+                style="width: 175px; heigth: 175px" 
+                src="/public/upload/{{filename}}" 
+                alt="{{title}}">
+            </a>
         </div>
         {{/each}}
     </div>

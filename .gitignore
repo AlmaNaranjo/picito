@@ -1,2 +1,8 @@
+#omitiendo dependencias del backend
 node_modules
+
+#omitiendo dependencias del frontend
 public/vendor
+
+# omitiendo temporales
+public/upload/temp

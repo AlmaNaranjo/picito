@@ -45,6 +45,15 @@ module.exports = function(app){
      app.use(methodOverride());
      //parseo de cookies
      app.use(cookieParser('Algun-valor-secreto'));
+
+     //se habilita la carga de archivos desde el cliente con multipar-use
+    app.use(multer({
+        dest: path.join(
+            __dirname,
+            '../public/upload/temp'
+        )
+    }).any()); 
+
      // crear las rutas de prueba de la app
      app=routes(app);
      
